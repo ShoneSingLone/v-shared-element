@@ -1,0 +1,56 @@
+html {
+  box-sizing: border-box;
+  min-height: 100vh;
+  background: #1d1d1f;
+  color: #d6d0cf;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+img {
+  height: 70px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+}
+
+@import 'typography';
+@import 'sizing';
+
+.hljs-pre {
+  margin: var(--sizing--1x) 0;
+  border-radius: 16px;
+  padding: 0 var(--sizing--1x);
+  overflow: hidden;
+  background: #282c34;
+}
+
+.hljs-comment {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+span.code {
+  background: hsla(220, 13%, 18%, 0.5);
+  color: #d6d0cf;
+  padding: 5px 15px;
+  border-radius: 10px;
+  font-family: monospace;
+}
+
+p {
+  line-height: 2em;
+}
+
+li {
+  margin: var(--sizing--2x) 0;
+}

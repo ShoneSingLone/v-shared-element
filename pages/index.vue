@@ -1,67 +1,75 @@
 <template>
-  <div class="container">
-    <div>
-      <logo v-shared-element:logo />
-      <h1 class="title">
-        example
-      </h1>
-      <h2 class="subtitle">
-        v-shared-element examples
-      </h2>
-      <div class="links">
-        <nuxt-link class="button--green" to="/about">About</nuxt-link>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
+  <div class="home">
+    <img
+      v-shared-element:vue-logo="{
+        zIndex: 2
+      }"
+      src="https://vuejs.org/images/logo.png"
+      alt="Vue.js logo"
+    />
+    <h1>v-shared-element</h1>
+    <h3>Declarative shared-element transitions for Vue.js</h3>
+
+    <nuxt-link v-shared-element:install class="button" to="/install"
+      >Installation</nuxt-link
+    >
+    <nuxt-link v-shared-element:usage class="button red" to="/usage"
+      >Usage</nuxt-link
+    >
+    <nuxt-link v-shared-element:caveats class="button green" to="/caveats"
+      >Caveats</nuxt-link
+    >
   </div>
 </template>
 
 <script lang="ts">
+import Hljs from '../components/hljs.vue'
 import Vue from 'vue'
-import Logo from '~/components/Logo.vue'
 
 export default Vue.extend({
-  components: {
-    Logo
-  }
+  components: { Hljs },
+  name: 'home'
 })
 </script>
 
-<style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
+<style lang="scss" scoped>
+.home {
+  margin: var(--sizing--5x) 20%;
+}
+
+img {
+  height: 150px;
+}
+
+.button {
+  width: 100%;
+  height: 70px;
   display: flex;
+  color: #fff;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 1.25rem;
   justify-content: center;
   align-items: center;
-  text-align: center;
-}
+  margin: var(--sizing--3x) 0;
+  border-radius: 24px;
+  background: #2e586b;
+  &:hover {
+    background: hsl(199, 30%, 35%);
+  }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  &.red {
+    background: #9f6062;
+    &:hover {
+      background: hsl(358, 20%, 50%);
+    }
+  }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  &.green {
+    background: hsl(148, 24%, 49%);
+    &:hover {
+      background: hsl(148, 25%, 55%);
+    }
+  }
 }
 </style>

@@ -14,7 +14,14 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'stylesheet',
+        href:
+          '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css'
+      }
+    ]
   },
   /*
    ** Customize the progress-bar color
@@ -27,7 +34,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/v-shared-element.client.ts'],
+  plugins: ['~/plugins/v-shared-element.client.ts', '~/plugins/highlight.ts'],
   /*
    ** Nuxt.js dev-modules
    */

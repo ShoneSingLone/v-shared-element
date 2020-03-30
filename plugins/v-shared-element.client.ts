@@ -4,6 +4,8 @@ import {
   SharedElementDirective
 } from 'v-shared-element'
 
-Vue.use(SharedElementDirective)
+Vue.use(SharedElementDirective, {
+  zIndex: 1
+})
 
 export default NuxtSharedElementRouteGuard

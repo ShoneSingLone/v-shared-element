@@ -1,0 +1,11 @@
+@import 'utils/math';
+
+:root {
+  $base: 2;
+  --sizing--1x: #{pow($base, 3) * 1px};
+  --sizing--2x: #{pow($base, 4) * 1px};
+  --sizing--3x: #{pow($base, 5) * 1px};
+  --sizing--4x: #{pow($base, 6) * 1px};
+  --sizing--5x: #{pow($base, 7) * 1px};
+  --sizing--6x: #{pow($base, 8) * 1px};
+}
