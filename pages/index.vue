@@ -28,6 +28,9 @@ import Vue from 'vue'
 
 export default Vue.extend({
   components: { Hljs },
+  head: {
+    title: 'v-shared-element'
+  },
   name: 'home'
 })
 </script>
