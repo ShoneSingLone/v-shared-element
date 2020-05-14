@@ -26,14 +26,7 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
-      {
-        rel: 'stylesheet',
-        href:
-          '//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.1/styles/atom-one-dark.min.css'
-      }
-    ]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   },
   /*
    ** Customize the progress-bar color
@@ -46,7 +39,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/v-shared-element.client.ts', '~/plugins/highlight.ts'],
+  plugins: ['~/plugins/v-shared-element.client.ts'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -63,5 +56,18 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+
+  generate: {
+    routes: [
+      '/post/books',
+      '/post/car',
+      '/post/elk',
+      '/post/flower',
+      '/post/guitar',
+      '/post/mtns',
+      '/post/road',
+      '/post/overhead'
+    ]
   }
 }

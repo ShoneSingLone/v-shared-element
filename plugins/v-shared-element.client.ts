@@ -3,9 +3,10 @@ import {
   NuxtSharedElementRouteGuard,
   SharedElementDirective
 } from 'v-shared-element'
+import { IOptions } from 'illusory/types/options'
 
 Vue.use(SharedElementDirective, {
-  zIndex: 1
-})
+  includeChildren: true
+} as IOptions)
 
 export default NuxtSharedElementRouteGuard

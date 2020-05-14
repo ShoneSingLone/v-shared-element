@@ -1,8 +1,8 @@
 html {
   box-sizing: border-box;
   min-height: 100vh;
-  background: #1d1d1f;
-  color: #d6d0cf;
+  background-color: #f7f2ef;
+  color: #30333a;
 }
 
 html,
@@ -10,10 +10,7 @@ body {
   margin: 0;
   padding: 0;
   width: 100%;
-}
-
-img {
-  height: 70px;
+  font-family: 'Montserrat', sans-serif;
 }
 
 *,
@@ -27,30 +24,19 @@ img {
 @import 'typography';
 @import 'sizing';
 
-.hljs-pre {
-  margin: var(--sizing--1x) 0;
-  border-radius: 16px;
-  padding: 0 var(--sizing--1x);
-  overflow: hidden;
-  background: #282c34;
-}
-
-.hljs-comment {
-  color: rgba(255, 255, 255, 0.8);
-}
-
-span.code {
-  background: hsla(220, 13%, 18%, 0.5);
-  color: #d6d0cf;
-  padding: 5px 15px;
-  border-radius: 10px;
-  font-family: monospace;
+a.external {
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  color: inherit;
+  &:hover {
+    opacity: 0.5;
+  }
 }
 
 p {
   line-height: 2em;
 }
 
-li {
-  margin: var(--sizing--2x) 0;
+img {
+  background: #fff;
 }
