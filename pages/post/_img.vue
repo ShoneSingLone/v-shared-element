@@ -36,14 +36,6 @@
 </template>
 
 <style lang="scss" scoped>
-.back {
-  border: 0;
-  background: rgba(255, 255, 255, 0.3);
-  padding: 8px;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
 .img {
   height: 75vh;
   width: 100%;
@@ -110,12 +102,12 @@ export default Vue.extend({
       return `${(this.$router as any).options.base}images/${
         this.$route.params.img
       }.jpg`
-    }
+    },
   },
   methods: {
     getId(name: string) {
       return `${name}_title`
-    }
+    },
   },
   data() {
     return {
@@ -123,38 +115,38 @@ export default Vue.extend({
       imgs: [
         {
           name: 'road',
-          title: 'Iconic road'
+          title: 'Iconic road',
         },
         {
           name: 'elk',
-          title: 'Beautiful animal'
+          title: 'Beautiful animal',
         },
         {
           name: 'flower',
-          title: 'Pretty flower'
+          title: 'Pretty flower',
         },
         {
           name: 'car',
-          title: 'Classic car'
+          title: 'Classic car',
         },
         {
           name: 'mtns',
-          title: 'Foggy mountains'
+          title: 'Foggy mountains',
         },
         {
           name: 'overhead',
-          title: 'Mountain road'
+          title: 'Mountain road',
         },
         {
           name: 'books',
-          title: 'Old books'
+          title: 'Old books',
         },
         {
           name: 'guitar',
-          title: 'Electric guitar'
-        }
-      ]
+          title: 'Electric guitar',
+        },
+      ],
     }
-  }
+  },
 })
 </script>
