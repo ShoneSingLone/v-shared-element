@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "nuxt": "^2.0.0",
-    "v-shared-element": "^2.0.2"
+    "v-shared-element": "^2.0.3"
   },
   "devDependencies": {
     "@nuxt/typescript-build": "^0.6.0",
