@@ -87,7 +87,7 @@ export default Vue.extend({
   name: 'home',
   methods: {
     getSrc(name: string) {
-      return `./images/${name}.jpg`
+      return `${(this.$router as any).options.base}images/${name}.jpg`
     },
     getId(name: string) {
       return `${name}_title`

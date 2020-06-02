@@ -107,7 +107,9 @@ export default Vue.extend({
       return img?.title || 'Unknown image'
     },
     src(): string {
-      return `../images/${this.$route.params.img}.jpg`
+      return `${(this.$router as any).options.base}images/${
+        this.$route.params.img
+      }.jpg`
     }
   },
   methods: {
