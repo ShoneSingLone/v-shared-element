@@ -43,6 +43,7 @@
   overflow: hidden;
   top: 0;
   z-index: -1;
+  background: #f7f2ef;
   .overlay {
     position: absolute;
     width: 100%;
