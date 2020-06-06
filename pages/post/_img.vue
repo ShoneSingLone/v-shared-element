@@ -75,12 +75,16 @@
   }
 
   p {
-    animation: fade 0.3s ease 300ms 1 both;
+    animation: fade 0.4s ease 250ms 1 both;
     opacity: 0;
 
     @keyframes fade {
       from {
         opacity: 0;
+        transform: translate(0, 20px);
+      }
+      75% {
+        transform: none;
       }
       to {
         opacity: 1;
@@ -103,12 +107,12 @@ export default Vue.extend({
       return `${(this.$router as any).options.base}images/${
         this.$route.params.img
       }.jpg`
-    },
+    }
   },
   methods: {
     getId(name: string) {
       return `${name}_title`
-    },
+    }
   },
   data() {
     return {
@@ -116,38 +120,38 @@ export default Vue.extend({
       imgs: [
         {
           name: 'road',
-          title: 'Iconic road',
+          title: 'Iconic road'
         },
         {
           name: 'elk',
-          title: 'Beautiful animal',
+          title: 'Beautiful animal'
         },
         {
           name: 'flower',
-          title: 'Pretty flower',
+          title: 'Pretty flower'
         },
         {
           name: 'car',
-          title: 'Classic car',
+          title: 'Classic car'
         },
         {
           name: 'mtns',
-          title: 'Foggy mountains',
+          title: 'Foggy mountains'
         },
         {
           name: 'overhead',
-          title: 'Mountain road',
+          title: 'Mountain road'
         },
         {
           name: 'books',
-          title: 'Old books',
+          title: 'Old books'
         },
         {
           name: 'guitar',
-          title: 'Electric guitar',
-        },
-      ],
+          title: 'Electric guitar'
+        }
+      ]
     }
-  },
+  }
 })
 </script>

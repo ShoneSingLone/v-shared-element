@@ -6,7 +6,8 @@ import {
 import { IOptions } from 'illusory/types/options'
 
 Vue.use(SharedElementDirective, {
-  includeChildren: true
+  includeChildren: true,
+  duration: '300ms'
 } as IOptions)
 
 export default NuxtSharedElementRouteGuard
