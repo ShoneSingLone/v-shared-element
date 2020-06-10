@@ -36,19 +36,3 @@ a.external {
 p {
   line-height: 2em;
 }
-
-.test {
-  &-enter-active {
-    transition: opacity 250ms ease;
-  }
-
-  &-leave-active {
-    position: absolute;
-    transition: opacity 250ms ease;
-  }
-
-  &-leave-to,
-  &-enter {
-    opacity: 0;
-  }
-}

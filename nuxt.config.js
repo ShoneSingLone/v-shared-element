@@ -8,21 +8,6 @@ const routerBase =
     : {}
 
 export default {
-  pageTransition: {
-    name: 'test',
-    mode: '',
-    beforeLeave(el) {
-      const bcr = el.getBoundingClientRect()
-      el.style.position = 'fixed'
-      el.style.top = `${bcr.y}px`
-      el.style.zIndex = '-1'
-    },
-    afterLeave(el) {
-      el.style.position = ''
-      el.style.top = ''
-      el.style.zIndex = ''
-    }
-  },
   mode: 'spa',
 
   ...routerBase,

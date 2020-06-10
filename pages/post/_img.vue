@@ -1,11 +1,18 @@
 <template>
   <div class="content">
-    <div class="img" v-shared-element:[$route.params.img]>
+    <div
+      class="img"
+      v-shared-element:[$route.params.img]="{ restrictToViewport: true }"
+    >
       <img :src="src" :alt="title" />
       <div class="overlay"></div>
     </div>
     <div class="post">
-      <h1 v-shared-element:[getId($route.params.img)]>
+      <h1
+        v-shared-element:[getId($route.params.img)]="{
+          restrictToViewport: true
+        }"
+      >
         {{ title }}
       </h1>
       <p>
